@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Chat App</title>
-        <link rel="icon" href="/img/favicon.png">
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
-    <body>
-        <div class="centered-form">
-            <div class="centered-form__box">
-                <h1>Join</h1>
-                <form action="/chat.html">
-                    <label>Display name</label>
-                    <input type="text" name="username" placeholder="Display name" required>
-                    <label>Room</label>
-                    <!-- <input type="text" name="room" placeholder="Room" required> -->
-                    <select name="room">
-                        <option value="">--Please choose a room--</option>
-                        <option value="Crusoe">Crusoe</option>
-                        <option value="Zelda">Zelda</option>
-                        <option value="Mario">Mario</option>
-                    </select>
-                    <button>Join</button>
-                </form>
-            </div>
+
+<head>
+    <title>Chat App</title>
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h1>Join</h1>
+            <form action="/chat.html">
+                <label>Display name</label>
+                <input type="text" name="username" placeholder="Display name" required />
+                <label>Room</label>
+                <input type="text" name="room" placeholder="Create or choose a room" list="rooms" required />
+                <datalist id="rooms">
+
+                </datalist>
+
+                <script id="options-template" type="text/html">
+                 {{#rooms}}
+                    <option value ="{{.}}">
+                 {{/rooms}}           
+                </script>
+                <button>Join</button>
+            </form>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/join.js"></script>

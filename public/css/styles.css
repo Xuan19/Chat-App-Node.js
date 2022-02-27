@@ -10,7 +10,7 @@ html {
   font-size: 16px;
 }
 
-input,select {
+input {
   font-size: 16px;
 }
 
@@ -31,7 +31,7 @@ label {
   color: #777;
 }
 
-input,select {
+input {
   border: 1px solid #eeeeee;
   padding: 12px;
   outline: none;
