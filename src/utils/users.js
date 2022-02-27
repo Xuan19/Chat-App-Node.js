@@ -1,5 +1,9 @@
 const users = []
 
+const getUniqueRooms = (value,index,self) => {
+    return self.indexOf(value) === index
+}
+
 const addUser = ({ id, username, room }) => {
     // Clean the data
     username = username.trim().toLowerCase()
@@ -27,7 +31,7 @@ const addUser = ({ id, username, room }) => {
     // Store user
     const user = { id, username, room }
     users.push(user)
-    return { user }
+    return { user}
 }
 
 const removeUser = (id) => {
@@ -51,5 +55,6 @@ module.exports = {
     addUser,
     removeUser,
     getUser,
-    getUsersInRoom
+    getUsersInRoom,
+    getUniqueRooms,
 }
