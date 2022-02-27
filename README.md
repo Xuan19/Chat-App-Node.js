@@ -1,6 +1,11 @@
 # chat-app-node.js
-This app is deployed in heroku.
-###### Live demo : https://xuanwang-chat-app-node.herokuapp.com/
+
+### Live demo : https://xuanwang-chat-app-node.herokuapp.com/
+
+#### Hosting Server: Heroku
+### Stack: 
+- socket.io,
+- express
 
 ## Features
 ###### Server side
